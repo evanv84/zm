@@ -1,0 +1,27 @@
+@mixin bgs($size) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-ms-background-size: $size;
+	background-size: $size;
+}
+
+@mixin trn($time) {
+	-webkit-transition: all $time cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	-moz-transition: all $time cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	-o-transition: all $time cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all $time cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+@mixin trf($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+@mixin trfo($transform) {
+	-webkit-transform-origin: $transform;
+	-moz-transform-origin: $transform;
+	-o-transform-origin: $transform;
+	transform-origin: $transform;
+}

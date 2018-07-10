@@ -1,0 +1,12 @@
+$gold: #d1a95b;
+$black: #2c2c2c;
+$white: #fff;
+
+// Media queries
+$phone: "only screen and (max-width: 640px) and (orientation: portrait)";
+$lsphone: "only screen and (max-width: 768px) and (orientation: landscape)";
+$nonphone: "only screen and (min-width: 769px)";
+$tablet: "only screen and (min-width: 767px) and (max-width: 1100px) and (orientation: portrait)";
+$lstablet: "only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape)";
+$desktop: "only screen and (max-width: 1600px)";
+$large: "only screen and (min-width: 1920px)";

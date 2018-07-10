@@ -1,0 +1,413 @@
+@import "variables";
+@import "mixins";
+@import "nav";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #FFF;
+	color: $black;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.btn {
+	display: inline-block;
+	background: $gold;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 8px 20px;
+	font-weight: 600;
+	font-size: 20px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+	-moz-box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+	box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+	
+	&:hover {
+		background: darken($gold, 10);
+	}
+}
+
+.v-section {
+	height: 100vh;
+} 
+
+header {
+	height: 100vh;
+	width: 100%;
+	
+	.top-slider {
+		height: 50vh;
+		display: flex;
+		overflow: hidden;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		
+		.part {
+			width: 32.8%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.bottom-text {
+		height: 50vh;
+		background: url(../img/header-bg.jpg) center no-repeat;
+		@include bgs(cover);
+		display: flex;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		
+		.offer {
+			width: 50%;
+			padding-left: 5vw;
+			h1 {
+				color: #FFF;
+				text-transform: uppercase;
+				font-size: 5vh;
+				margin-bottom: 20px;
+			}
+		}
+
+		.presentation {
+			width: 50%;
+			text-align: center;
+			display: flex;
+			-webkit-align-items: center;
+			        align-items: center;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			
+			.watch {
+				width: 140px;
+				height: 140px;
+				display: inline-block;
+				border: 3px solid $gold;
+				background: url(../img/play.svg)no-repeat;
+				background-position: 30px center;
+				@include bgs(70%);
+				-webkit-border-radius: 50%;
+				        border-radius: 50%;
+				margin-bottom: 20px;
+				-webkit-box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+				-moz-box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+				box-shadow: 4px 4px 19px 0px rgba(0,0,0,0.22);
+			}
+
+			p {
+				font-size: 14px;
+				color: #FFF;
+			}
+		}
+	}
+
+	.down-arrow {
+		position: absolute;
+		width: 30px;
+		height: 50px;
+		bottom: 20px;
+		left: 50%;
+		@include trf(translateX(-50%));	
+
+	}
+}
+
+.step-1 {
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	    
+	.img-col {
+		width: 60%;
+		height: 100vh;
+		background: url(../img/step1-img.jpg) center no-repeat;
+		@include bgs(cover);
+	}
+
+	@import "steps";
+	
+	.points {
+		.point {
+			&:before {
+				left: -24%;
+			}
+		}
+	}
+
+}
+
+.step-2 {
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	    
+	@import "steps";
+	
+	.text-col {
+		background: url(../img/step2-bg.jpg) center no-repeat;
+		@include bgs(cover);
+		
+		.points {
+			.point {
+				&:before {
+					right: -24%;
+				}
+
+				&:nth-child(2) {
+					&:after {
+						content: "";
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						background: url(../img/plus.svg) center no-repeat;
+						@include bgs(60%);
+						margin-left: 20px;
+						@include trf(translateY(10px));
+						border: 1px solid $black;
+						-webkit-border-radius: 50%;
+						        border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+	
+	.img-col {
+		width: 60%;
+		height: 100vh;
+		background: url(../img/step2-img.jpg) center no-repeat;
+		@include bgs(cover);
+	}
+}
+
+.step-3 {
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	    
+	.img-col {
+		width: 60%;
+		height: 100vh;
+		background: url(../img/step3-img.jpg) center no-repeat;
+		@include bgs(cover);
+	}
+
+	@import "steps";
+	
+	.text-col {
+		background: url(../img/step3-bg.jpg) center no-repeat;
+		@include bgs(cover);
+		
+		.points {
+			.point {
+
+				a {
+					font-size: 18px;
+					color: $gold;
+					font-weight: 400;
+				}
+				&:before {
+					left: -24%;
+				}
+			}
+		}
+
+		.btn {
+			text-decoration: none;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+	}
+}
+
+.collections {
+	overflow: hidden;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    
+	.text-col {
+		width: 40%;
+		height: 100vh;
+		padding-left: 3vw;
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		background: url(../img/collections-bg.jpg) center no-repeat;
+		@include bgs(cover);
+		
+		.content {
+			width: 70%;
+			
+			h3 {
+				text-transform: uppercase;
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+
+			p {
+				margin-bottom: 40px;
+			}
+
+			.tabs-nav {
+				list-style: none;
+				padding-left: 0;
+				
+				li {
+					margin-bottom: 30px;
+					position: relative;
+					display: block;
+					
+					&.active {
+						a {
+							color: $gold;
+							font-weight: 600;
+						}
+
+						&:after {
+							content: "";
+							position: absolute;
+							width: 25vw;
+							height: 3px;
+							background: $gold;
+							right: -30%;
+							top: 15px;
+						}
+					}
+					a {
+						font-size: 24px;
+						text-decoration: none;
+						text-transform: uppercase;
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+
+	.img-col {
+		width: 60%;
+		height: 100vh;
+		background: url(../img/stone-bg.jpg) center no-repeat;
+		@include bgs(cover);
+		
+		.tabs-content {
+			height: 100vh;
+			display: flex;
+			-webkit-align-items: center;
+			        align-items: center;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			
+			.tab {
+				width: 100%;
+				-webkit-justify-content: center;
+				        justify-content: center;
+				-webkit-align-items: center;
+				        align-items: center;
+				.row {
+					width: 80%;
+					margin-left: 10%;
+					display: flex;
+					-webkit-justify-content: space-between;
+					        justify-content: space-between;
+					-webkit-flex-direction: row;
+					    -ms-flex-direction: row;
+					        flex-direction: row;
+					    
+					.col {
+						width: 28%;
+						height: 35vh;
+						position: relative;
+						color: #FFF;
+						text-align: center;
+						
+						img {
+							height: 30vh;
+							object-fit: contain;
+						}
+
+						p {
+							position: absolute;
+							display: block;
+							width: 100%;
+							bottom: 70px;
+							font-weight: 300;
+							
+							&.price {
+								font-weight: 400;
+								bottom: 30px;
+								font-size: 24px;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
